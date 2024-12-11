@@ -1,23 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+ 
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-/*variavel para utilizar*/
+ 
 :root {
     --color-black:#0B0E19;
     --color-green:#014040;
     --color-violet:#9125A3;
     --color-gold:#D48C00;
+    --color-white:#F2ECE4;
     --color-black-light:#011C26;
     --color-green-light:#ADD9B0;
-    --color-white:#F2ECE4;
-    
 }
-
+ 
 * {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
+ 
 header nav.menu-perfil {
     display: flex;
     background-color: #F2ECE4;
@@ -25,47 +26,79 @@ header nav.menu-perfil {
     width: 100%;
     padding: 30px 0;
 }
-
+ 
 .logo {
     color: var(--color-black-light);
     text-decoration: none;
     text-transform: uppercase;
-
+ 
 }
+ 
 .logo p {
     font-weight: bold !important;
 }
-
+ 
 .menu-perfil ul {
     list-style: none;
     display: flex;
-    gap: 5px;
-
+    gap: 10px;
 }
+ 
 .menu-perfil li a {
     text-decoration: none;
     padding: 8px;
     border-radius: 8px;
-    color:var(--color-black);
+    color: var(--color-black);
 }
-
-
-.menu-perfil li a:hover,
+ 
+.menu-perfil li a:hover ,
 .menu-perfil li a.selecionado {
     background-color: var(--color-black);
     color: var(--color-white);
-    border: 1px;
-    transition: 0.3s;
-
+    border: 1px solid var(--color-black);
+    transition: 0,2s;
 }
+ 
 #banner {
     background-color: tomato;
+    height: 100%;
 }
-.container-carrossel {
+ 
+.container-carrosel {
     width: 100%;
     max-width: 1920px;
+ 
+    overflow: hidden;
 }
-.container-carrossel img {
+ 
+.container-carrosel img {
     width: 100%;
-
 }
+ 
+.container-carrosel button {
+    position: absolute;
+    top: 50%;
+ 
+ 
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--color-white);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+ 
+.container-carrosel button.prev {
+    left: 10px;
+}
+ 
+.container-carrosel button.next {
+    right: 10px;
+}
+ 
+.carrosel {
+    display: flex;
+    transition: transform 1s ease-in-out;
+    /* transform: translateX(-300%); */
+ 
+}
+ 
