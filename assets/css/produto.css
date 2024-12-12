@@ -64,6 +64,10 @@
 
 
 }
+#produto a {
+    text-decoration: none;
+    color: var(--color-black);
+}
 
 
  
